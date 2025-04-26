@@ -29,4 +29,14 @@ public class Employee {
     void print(){
         System.out.printf("Name: %s, Age: %d", name, age);
     }
+
+    @Override
+    public String toString() {
+        return "Name: " + name + ", Age: " + age;
+    }
+
+    @Override
+    public int hashCode() {
+        return name.hashCode() * age;
+    }
 }
